@@ -34,7 +34,11 @@
 Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity (above). If you did not attend and perform this activity, review the lecture slides and write your own plan for how you believe HW1 should be built. If your initially proposed plan turned out significantly different than the activity answers given by Prof Reid, you may want to note what was different. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
 
 
-Write your Devlog here!
+I used my breakdown as a blueprint for what to add before checking the rubric to see more specific instructions and double-check if i missed something. The simplified correlate very clearly to GameObjects: the player is `Player`, the plant is `Plant`, the camera is `Camera`, and the two UI objects are `Text_SeedsPlanted` and `Text_SeedsRemaining` (although, for those, the number and text are two seperate objects, bringing the total to four.)
+
+The player's movement is handled by the player script's `Update()` in line 24, where the player's transform is translated by `Input.GetAxis`. The ability to move through walls and plants is by default, since it only requires a *lack* of collisions to function.
+
+Seed planting also happens in the player's script, in lines 25-31. If the spacebar is pressed or held, the game checks once if `_numSeedsLeft` is greater than 0. If it is, `PlantSeed()` is called. In order, this method: clones the plant prefab at the player's position, subtracts `_numSeedsLeft`, adds to `_numSeedsPlanted`, and updates the UI accordingly.
 
 
 ## Open-Source Assets
