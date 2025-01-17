@@ -31,9 +31,6 @@
 - Once the seeds remaining Ui reaches zero, the player can no longer plant anymore plants, and no more plants can appear.
 
 ## Devlog
-Prompt: Include the HW1 break-down exercise you wrote during the Week 1 - Lecture 2 (Jan 9) in-class activity (above). If you did not attend and perform this activity, review the lecture slides and write your own plan for how you believe HW1 should be built. If your initially proposed plan turned out significantly different than the activity answers given by Prof Reid, you may want to note what was different. Then, write about how the plan you wrote in the break-down connects to the code you wrote. Cite specific class names and method names in the code and GameObjects in your Unity Scene.
-
-
 I used my breakdown as a blueprint for what to add before checking the rubric to see more specific instructions and double-check if i missed something. The simplified correlate very clearly to GameObjects: the player is `Player`, the plant is `Plant`, the camera is `Camera`, and the two UI objects are `Text_SeedsPlanted` and `Text_SeedsRemaining` (although, for those, the number and text are two seperate objects, bringing the total to four.)
 
 The player's movement is handled by the player script's `Update()` in line 24, where the player's transform is translated by `Input.GetAxis`. The ability to move through walls and plants is by default, since it only requires a *lack* of collisions to function.
@@ -44,3 +41,8 @@ Seed planting also happens in the player's script, in lines 25-31. If the spaceb
 ## Open-Source Assets
 If you added any other outside assets, list them here!
 - [Sprout Lands sprite asset pack](https://cupnooble.itch.io/sprout-lands-asset-pack) - character and item sprites
+
+## Prof comments
+Great job clearly connecting your breakdown to your code! :)
+
+Thank you for formatting your break-down list well. You can also remove the Devlog prompts- this makes it easier for me to read your Devlog.
